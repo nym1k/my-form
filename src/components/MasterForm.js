@@ -27,16 +27,18 @@ class MasterForm extends Component {
     this.setState({
       [name]: value
     })
+    console.log(name, value);
   }
 
   // Trigger an alert on form submission
   handleSubmit = (event) => {
     event.preventDefault()
-    const { email, username, password } = this.state
+    const { email, username, password, banana } = this.state
     alert(`Your registration detail: \n
       Email: ${email} \n
       Username: ${username} \n
-      Password: ${password}`)
+      Password: ${password} \n
+      Banana: ${banana} `)
   }
 
   // Test current step with ternary
@@ -106,6 +108,7 @@ class MasterForm extends Component {
               currentStep={this.state.currentStep}
               handleChange={this.handleChange}
               email={this.state.email}
+              banana={this.state.banana}
             />
             <Step2
               currentStep={this.state.currentStep}
