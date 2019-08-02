@@ -18,7 +18,22 @@ class Step1 extends React.Component {
           value={this.props.email} // Prop: The email input
           onChange={this.props.handleChange} // Prop: Puts data into state
         />
+        <table>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="banana"
+                         value="one"
+                         checked={this.props.banana === "one"}
+                         onChange={this.props.handleChange} />One</td>
+              <td><input type="radio" name="banana"
+                         value="two"
+                         checked={this.props.banana === "two"}
+                         onChange={this.props.handleChange} />two</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+
     )
   }
 }

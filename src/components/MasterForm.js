@@ -11,7 +11,8 @@ class MasterForm extends Component {
       currentStep: 1, // Default is Step 1
       email: '',
       username: '',
-      password: ''
+      password: '',
+      banana: ''
     }
     // Bind the submission to handleChange()
     this.handleChange = this.handleChange.bind(this)
@@ -44,7 +45,7 @@ class MasterForm extends Component {
   _next() {
     let currentStep = this.state.currentStep
     {/* If the current step is 1 or 2, then add one on "next" button click */}
-    currentStep = currentStep >= 2? 3: currentStep + 1
+    currentStep = currentStep >= 2 ? 3 : currentStep + 1
     this.setState({
       currentStep: currentStep
     })
@@ -53,7 +54,7 @@ class MasterForm extends Component {
   _prev() {
     let currentStep = this.state.currentStep
     {/* If the current step is 2 or 3, then subtract one on "previous" button click */}
-    currentStep = currentStep <= 1? 1: currentStep - 1
+    currentStep = currentStep <= 1 ? 1 : currentStep - 1
     this.setState({
       currentStep: currentStep
     })
@@ -95,31 +96,33 @@ class MasterForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>A Wizard Form!</h1>
-        <p>Step {this.state.currentStep} </p>
+        <div className="container">
+          <h1>A Wizard Form!</h1>
+          <p>Step {this.state.currentStep} </p>
 
-        <form onSubmit={this.handleSubmit}>
-          {/* Render the form steps and pass in the required props */}
-          <Step1
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            email={this.state.email}
-          />
-          <Step2
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            email={this.state.email}
-          />
-          <Step3
-            currentStep={this.state.currentStep}
-            handleChange={this.handleChange}
-            email={this.state.email}
-          />
+          <form onSubmit={this.handleSubmit}>
+            {/* Render the form steps and pass in the required props */}
+            <Step1
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              email={this.state.email}
+            />
+            <Step2
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              email={this.state.email}
+            />
+            <Step3
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              email={this.state.email}
+            />
 
-          {this.previousButton}
-          {this.nextButton}
+            {this.previousButton}
+            {this.nextButton}
 
-        </form>
+          </form>
+        </div>
       </React.Fragment>
     )
   }
