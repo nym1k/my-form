@@ -11,3 +11,128 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bg-dark {
+  background-color: #2d2d2d !important;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #8bc33b;
+  border-color: #8bc33b;
+}
+
+.btn-primary:hover {
+  background-color: #019301;
+  border-color: #019301;
+}
+
+/* Header */
+
+.notification-bar {
+  background-color: #019301;
+  color: #fff;
+}
+
+/* Step Progress Bar */
+
+.progress-steps {
+  margin: 0 0 0 25px;
+  padding: 10px 20px;
+  border-left: 6px solid #77C600;
+}
+
+.progress-step {
+  list-style: none;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+.progress-step:last-child {
+  margin-bottom: 0;
+}
+
+.progress-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.progress-step_text {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+.step-active {
+  font-weight: 700;
+}
+
+/* Nav Buttons */
+
+.nav-buttons {
+  margin-bottom: 25px;
+}
+
+/* Form */
+
+.form {
+  margin-bottom: 50px;
+}
+
+.form-header {
+  margin-bottom: 25px;
+}
+
+.form-info {
+  background-color: #E8ECEF;
+}
+
+fieldset {
+  margin-bottom: 50px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.input-items {
+  display: flex;
+  padding: 0;
+}
+
+.input-item {
+  flex: 1 1 100px;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.input-item:last-child {
+  margin-right: 0;
+}
+
+.input-group-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-checkbox label {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+/* Results */
+
+.results-title {
+  margin-bottom: 25px;
+}
+
+.results-group {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
